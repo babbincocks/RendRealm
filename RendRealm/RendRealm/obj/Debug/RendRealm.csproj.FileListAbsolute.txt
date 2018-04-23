@@ -5,3 +5,10 @@ C:\Users\Cyberadmin\Documents\Visual Studio 2017\Projects\RendRealm\RendRealm\ob
 C:\Users\Cyberadmin\Documents\Visual Studio 2017\Projects\RendRealm\RendRealm\obj\Debug\RendRealm.csproj.CoreCompileInputs.cache
 C:\Users\Cyberadmin\Documents\Visual Studio 2017\Projects\RendRealm\RendRealm\obj\Debug\RendRealm.exe
 C:\Users\Cyberadmin\Documents\Visual Studio 2017\Projects\RendRealm\RendRealm\obj\Debug\RendRealm.pdb
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\bin\Debug\RendRealm.exe.config
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\bin\Debug\RendRealm.exe
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\bin\Debug\RendRealm.pdb
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\obj\Debug\RendRealm.csprojResolveAssemblyReference.cache
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\obj\Debug\RendRealm.csproj.CoreCompileInputs.cache
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\obj\Debug\RendRealm.exe
+C:\Users\Cyberadmin\Desktop\RendRealm\RendRealm\RendRealm\obj\Debug\RendRealm.pdb

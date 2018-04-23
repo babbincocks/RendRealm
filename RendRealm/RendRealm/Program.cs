@@ -21,7 +21,7 @@ namespace RendRealm
     {
         public static string charName = "???";
         public static string charlocatknow = "no";
-
+        
 
 
         public static void StartGame()
@@ -33,8 +33,7 @@ namespace RendRealm
 
             NameChar();
 
-            Console.WriteLine("Ah... " + charName + ", is it?\nWell, it's good to meet you, " + charName + ".");
-            Console.ReadLine();
+
             Console.WriteLine("Pardon me asking, " + charName + ", but do you know where you are?\n(YES / NO)");
             charlocatknow = Console.ReadLine();
 
@@ -66,8 +65,11 @@ namespace RendRealm
             Console.Clear();
             Console.WriteLine("...");
             Console.ReadLine();
+            Console.WriteLine("... ...");
+            Console.ReadLine();
             Console.WriteLine("Oh! I just realized you haven't asked anything about me yet.");
-            if (charlocatknow == "YES")
+            Console.ReadLine();
+            if (charlocatknow.ToUpper() == "YES")
             {
                 Console.WriteLine("I bet you're wondering why you can't, y'know, see me.");
             }
@@ -76,6 +78,18 @@ namespace RendRealm
                 Console.WriteLine("I bet you're wondering why you can't, y'know, see me. Frankly, I'm surprised you didn't ask sooner.");
             }
             Console.ReadLine();
+
+            Console.WriteLine("Let me start off with introducing myself.");
+
+            Console.ReadLine();
+
+            Console.WriteLine("I'm Traducy.");
+
+            Console.ReadLine();
+
+            Console.WriteLine("I'm a Fylgja. If I'm not mistaken, you don't have those back where \nyou're from, correct?");
+
+            Console.ReadLine();
         }
 
 
@@ -83,11 +97,120 @@ namespace RendRealm
         public static void NameChar()
         {
             Console.WriteLine("Who are you? \n(Type in your desired name)");
-
+            
             charName = Console.ReadLine();
+            bool a = charName.All(char.IsLetter);
+
+            if (charName == "")
+            {
+                Random rng = new Random();
+                int seedy = rng.Next(14);
+                Console.WriteLine("...");
+                Console.ReadLine();
+                Console.WriteLine("...it's okay.");
+                Console.ReadLine();
+                Console.WriteLine("You're in a new environment.");
+                Console.ReadLine();
+                Console.WriteLine("...or, well... lack thereof.");
+                Console.ReadLine();
+                Console.WriteLine("Point is, I understand if you're nervous.");
+                Console.ReadLine();
+                Console.WriteLine("How about I just call you...");
+                Console.ReadLine();
+                charName = namePool(seedy);
+                Console.WriteLine(charName + "?");
+                Console.ReadLine();
+                Console.WriteLine("Hope you like your new name, " + charName);
+                Console.ReadLine();
+            }
+
+            else if (charName.EndsWith("!"))
+            {
+                Console.WriteLine("Now now, there's no need to shout.");
+                charName = charName.TrimEnd('!');
+            }
+
+            else if (a == false && !charName.Contains("!") && !charName.Contains("?"))
+            {
+                Console.WriteLine("That's an odd name.");
+                Console.ReadLine();
+                Console.WriteLine("I like it.");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Ah... " + charName + ", is it?\nWell, it's good to meet you, " + charName + ".");
+                Console.ReadLine();
+            }
         }
 
+        public static string namePool(int seed)
+        {
+            string name = "Cupcake";
 
+            if (seed == 0)
+            {
+                name = "Cupcake";
+            }
+            else if (seed == 1)
+            {
+                name = "Sam";
+            }
+            else if (seed == 2)
+            {
+                name = "Cranbo";
+            }
+            else if (seed == 3)
+            {
+                name = "Trimby";
+            }
+            else if (seed == 4)
+            {
+                name = "Ziploc";
+            }
+            else if (seed == 5)
+            {
+                name = "Wawa";
+            }
+            else if (seed == 6)
+            {
+                name = "Shoobie";
+            }
+            else if (seed == 7)
+            {
+                name = "Scout";
+            }
+            else if (seed == 8)
+            {
+                name = "Dude";
+            }
+            else if (seed == 9)
+            {
+                name = "Stinky";
+            }
+            else if (seed == 10)
+            {
+                name = "Strombolius";
+            }
+            else if (seed == 11)
+            {
+                name = "Wimbly Pembleton III";
+            }
+            else if (seed == 12)
+            {
+                name = "Devon";
+            }
+            else if (seed == 13)
+            {
+                name = "Dingalinga";
+            }
+            else if (seed == 14)
+            {
+                name = "Peebub Bubber";
+            }
+
+            return name;
+        }
 
         public static void Startlocatdetail()
         {
@@ -104,6 +227,8 @@ namespace RendRealm
             Console.ReadLine();
             Console.WriteLine("Oh, and then there's our queen: Queen Esthafiria Moransius Trindelio IV.\n'Course, us 'ahem' " +
                 "dissenters just call her the Ice Queen.");
+            Console.ReadLine();
+            Console.WriteLine("If you're looking for someone to blame for most of this country's problems, it's her.");
         }
 
         
