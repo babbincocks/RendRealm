@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Text.RegularExpressions;
 namespace RendRealm
 {
 
@@ -104,7 +105,7 @@ namespace RendRealm
             if (charName == "")
             {
                 Random rng = new Random();
-                int seedy = rng.Next(14);
+                int seedy = rng.Next(15);
                 Console.WriteLine("...");
                 Console.ReadLine();
                 Console.WriteLine("...it's okay.");
@@ -120,14 +121,28 @@ namespace RendRealm
                 charName = namePool(seedy);
                 Console.WriteLine(charName + "?");
                 Console.ReadLine();
-                Console.WriteLine("Hope you like your new name, " + charName);
+                Console.WriteLine("Hope you like your new name, " + charName + ".");
                 Console.ReadLine();
             }
 
-            else if (charName.EndsWith("!"))
+            //else if (charName.Contains("!") || charName.Contains("?") || charName.Contains("!?") || charName.Contains("?!"))
+            //{
+            //    Console.WriteLine("Yes, let the world know of your confusion.");
+            //    charName = Regex.Replace(charName, "!?", "");
+            //}
+
+            else if (charName.Contains("!"))
             {
                 Console.WriteLine("Now now, there's no need to shout.");
-                charName = charName.TrimEnd('!');
+                charName = Regex.Replace(charName, "!", "");
+                Console.ReadLine();
+            }
+
+            else if (charName.EndsWith("?"))
+            {
+                Console.WriteLine("Hey, I asked you.");
+                charName = Regex.Replace(charName, "?", "");
+                Console.ReadLine();
             }
 
             else if (a == false && !charName.Contains("!") && !charName.Contains("?"))
@@ -207,6 +222,10 @@ namespace RendRealm
             else if (seed == 14)
             {
                 name = "Peebub Bubber";
+            }
+            else if (seed == 15)
+            {
+                name = "Angel";
             }
 
             return name;
