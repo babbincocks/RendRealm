@@ -58,6 +58,7 @@ namespace RendRealm
                         Console.WriteLine("I'm just going to assume you said... no.");
                         Console.ReadLine();
                         Startlocatdetail();
+                        
                         dec = true;
                     }
 
@@ -91,6 +92,10 @@ namespace RendRealm
             Console.WriteLine("I'm a Fylgja. If I'm not mistaken, you don't have those back where \nyou're from, correct?");
 
             Console.ReadLine();
+
+            Console.WriteLine("You don't need to worry too much on details about me, really. It's you who we \nshould be focusing on. ");
+
+            Console.ReadLine();
         }
 
 
@@ -101,9 +106,12 @@ namespace RendRealm
             
             charName = Console.ReadLine();
             bool a = charName.All(char.IsLetter);
+            charName = charName.TrimStart();
+            charName = charName.TrimEnd();
 
             if (charName == "")
             {
+                
                 Random rng = new Random();
                 int seedy = rng.Next(15);
                 Console.WriteLine("...");
@@ -181,7 +189,7 @@ namespace RendRealm
             }
             else if (seed == 4)
             {
-                name = "Ziploc";
+                name = "Zippy Lockjaw";
             }
             else if (seed == 5)
             {
@@ -248,6 +256,7 @@ namespace RendRealm
                 "dissenters just call her the Ice Queen.");
             Console.ReadLine();
             Console.WriteLine("If you're looking for someone to blame for most of this country's problems, it's her.");
+            
         }
 
         
@@ -260,5 +269,6 @@ namespace RendRealm
             int strengthCheck = 5;
             return strengthCheck;
         }
+
     }
 }
